@@ -58,12 +58,18 @@ article.center h4 {
   list-style: none;
 }
 
+/* line 55, ../sass/_globals.scss */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  display: block;
+}
+
 /* Zen grids layout */
 /* line 6, ../sass/_main-grid.scss */
 .container {
-  background: #F4E6E1;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: black;
 }
 /* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
@@ -75,14 +81,14 @@ article.center h4 {
   clear: both;
 }
 
-/* line 23, ../sass/_main-grid.scss */
-.center {
+/* line 25, ../sass/_main-grid.scss */
+#meatballs {
   float: left;
-  width: 66.66667%;
+  width: 100%;
   margin-left: 0%;
-  margin-right: -66.66667%;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-right: -100%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -92,21 +98,21 @@ article.center h4 {
   border-color: #740004;
 }
 
-/* line 29, ../sass/_main-grid.scss */
+/* line 30, ../sass/_main-grid.scss */
 .block_a, .block_b {
   border-width: 1px;
   border-color: #740004;
   border-left-style: solid;
 }
 
-/* line 34, ../sass/_main-grid.scss */
+/* line 35, ../sass/_main-grid.scss */
 .block_a {
   float: right;
-  width: 33.33333%;
+  width: 30%;
   margin-right: 0%;
-  margin-left: -33.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: -30%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -115,15 +121,15 @@ article.center h4 {
   background: white;
 }
 
-/* line 41, ../sass/_main-grid.scss */
+/* line 42, ../sass/_main-grid.scss */
 .block_b {
   clear: right;
   float: right;
-  width: 33.33333%;
+  width: 30%;
   margin-right: 0%;
-  margin-left: -33.33333%;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: -30%;
+  padding-left: 0px;
+  padding-right: 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -131,9 +137,49 @@ article.center h4 {
   word-wrap: break-word;
   border-bottom-style: solid;
   background: white;
+  padding-left: 20px;
 }
 
-/* line 50, ../sass/_main-grid.scss */
+/* line 54, ../sass/_main-grid.scss */
+#hog-heave {
+  clear: left;
+  float: left;
+  width: 30%;
+  margin-left: 0%;
+  margin-right: -30%;
+  padding-left: 0px;
+  padding-right: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border-width: 1px;
+  border-color: #740004;
+  border-left-style: solid;
+  border-bottom-style: solid;
+}
+
+/* line 63, ../sass/_main-grid.scss */
+#trump {
+  float: left;
+  width: 30%;
+  margin-left: 70%;
+  margin-right: -100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border-width: 1px;
+  border-color: #740004;
+  border-top-style: solid;
+  border-left-style: solid;
+}
+
+/* line 78, ../sass/_main-grid.scss */
 .footer {
   clear: left;
   float: left;
@@ -148,106 +194,6 @@ article.center h4 {
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 8px;
-}
-
-/* Zen grids icons layout */
-/* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
-.projects-container:before, .projects-container:after {
-  content: "";
-  display: table;
-}
-/* line 50, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
-.projects-container:after {
-  clear: both;
-}
-
-/* line 15, ../sass/_projects-grid.scss */
-.project1 {
-  float: left;
-  width: 70%;
-  margin-left: 0%;
-  margin-right: -70%;
-  padding-left: 2px;
-  padding-right: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 19, ../sass/_projects-grid.scss */
-.project2 {
-  float: left;
-  width: 30%;
-  margin-left: 70%;
-  margin-right: -100%;
-  padding-left: 2px;
-  padding-right: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 23, ../sass/_projects-grid.scss */
-.project3 {
-  clear: left;
-  float: left;
-  width: 40%;
-  margin-left: 0%;
-  margin-right: -40%;
-  padding-left: 2px;
-  padding-right: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 28, ../sass/_projects-grid.scss */
-.project4 {
-  float: left;
-  width: 30%;
-  margin-left: 40%;
-  margin-right: -70%;
-  padding-left: 2px;
-  padding-right: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 32, ../sass/_projects-grid.scss */
-.project5 {
-  clear: left;
-  float: left;
-  width: 60%;
-  margin-left: 40%;
-  margin-right: -100%;
-  padding-left: 2px;
-  padding-right: 3px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 37, ../sass/_projects-grid.scss */
-.project1, .project2, .project3, .project4, .project5 {
-  border: 1px dashed red;
-}
-
-/* line 41, ../sass/_projects-grid.scss */
-.project1 img, .project2 img, .project3 img, .project4 img, .project5 img {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
 }
 
 /* Zen grids icons layout */

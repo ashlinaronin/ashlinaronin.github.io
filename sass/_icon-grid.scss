@@ -18,7 +18,7 @@ $background-color: lighten(#F4E6E1, 50);
 @for $i from 1 through $skill-count {
   .skill:nth-child(#{$i}) {
     // background: darken($background-color, $i * 2);
-
+  
     @if $i <= $skill-count/2 {
       @include zen-grid-item(1,$i);
 

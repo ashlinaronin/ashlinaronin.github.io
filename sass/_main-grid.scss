@@ -1,5 +1,5 @@
-$zen-column-count: 3;
-$zen-gutter-width: 20px;
+$zen-column-count: 10;
+$zen-gutter-width: 0px;
 
 
 /* Zen grids layout */
@@ -9,21 +9,22 @@ $zen-gutter-width: 20px;
 
   // background-color: #666370; // Old browsers
   // @include filter-gradient(#ffffff, #9b7874, horizontal); // IE6-9
-  // @include background-image(linear-gradient(left, #ffffff 0%, #99544c 100%));
+  // @include background-image(linear-gradient(right, #ffffff 0%, #99544c 100%));
   // @include background-image(linear-gradient(left, #ffffff 0%, #000000 100%));
 
-  // background: url('../images/crazy_house.jpg');
-  background: #F4E6E1;
+
+  // background: #F4E6E1;
 
   // background-blend-mode: screen;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background: black;
 }
 
-.center {
-  @include zen-grid-item(2, 1);
-  @include our-border();
 
+#meatballs {
+  @include zen-grid-item(10, 1);
+  @include our-border();
 }
 
 .block_a, .block_b {
@@ -32,7 +33,7 @@ $zen-gutter-width: 20px;
 }
 
 .block_a {
-  @include zen-grid-item(1, 1, right);
+  @include zen-grid-item(3, 1, right);
   // border-bottom-style: solid;
   background: white;
   // mix-blend-mode: exclusion;
@@ -40,12 +41,39 @@ $zen-gutter-width: 20px;
 
 .block_b {
   @include zen-clear(right);
-  @include zen-grid-item(1, 1, right);
+  @include zen-grid-item(3, 1, right);
   border-bottom-style: solid;
   // background: url('../images/ha_giang.jpg');
   background: white;
   // mix-blend-mode: exclusion;
+  padding-left: 20px;
 }
+
+
+
+#hog-heave {
+  @include zen-clear();
+  @include zen-grid-item(3, 1);
+  @include our-border();
+  border-left-style: solid;
+  border-bottom-style: solid;
+}
+
+
+#trump {
+  @include zen-grid-item(3, 8);
+  @include our-border();
+  border-top-style: solid;
+  border-left-style: solid;
+
+}
+
+
+
+
+
+
+
 
 .footer {
   @include zen-clear(left);
