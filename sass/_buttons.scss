@@ -1,0 +1,32 @@
+$gradient-dark: #a6a6a6;
+$gradient-light: #ffffff;
+
+
+.form-actions input.form-submit {
+  background: $gradient-dark;
+  background-image: -webkit-linear-gradient(top, $gradient-dark, $gradient-light);
+  background-image: -moz-linear-gradient(top, $gradient-dark, $gradient-light);
+  background-image: -ms-linear-gradient(top, $gradient-dark, $gradient-light);
+  background-image: -o-linear-gradient(top, $gradient-dark, $gradient-light);
+  background-image: linear-gradient(to bottom, $gradient-dark, $gradient-light);
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  text-shadow: 2px 3px 0px #2b262b;
+  color: #ffffff;
+  font-size: 19px;
+  font-family: "Gill Sans", Georgia, sans-serif;
+  padding: 10px 20px 10px 20px;
+  border: dotted #ffffff 3px;
+  text-decoration: none;
+}
+
+.form-actions input.form-submit:hover {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, $gradient-light, $gradient-dark);
+  background-image: -moz-linear-gradient(top, $gradient-light, $gradient-dark);
+  background-image: -ms-linear-gradient(top, $gradient-light, $gradient-dark);
+  background-image: -o-linear-gradient(top, $gradient-light, $gradient-dark);
+  background-image: linear-gradient(to bottom, $gradient-light, $gradient-dark);
+  text-decoration: none;
+}

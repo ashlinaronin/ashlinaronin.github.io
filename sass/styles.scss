@@ -1,0 +1,150 @@
+/* Import Zen Grids */
+@import "zen";
+@import "zen/background";
+
+$zen-column-count: 3;
+$zen-gutter-width: 20px;
+
+$primary-color: #FF5A5F;
+// $primary-color: #00FF00;
+$darker-primary: darken($primary-color, 45);
+$other-primary: desaturate(darken($primary-color, 36), 73);
+$complementary: darken(adjust_hue($primary-color, 197), 54);
+
+@mixin our-border() {
+  border-width: 1px;
+  // border-style: none;
+  // border-bottom-style: solid;
+  border-color: $darker-primary;
+}
+
+// Import buttons and grid after vars and mixins
+// should move everything else to other files too
+
+// Definitions first
+@import "_variables.scss";
+
+// Then global styles
+@import "_globals.scss";
+@import "_buttons.scss";
+
+// Then page specifics
+@import "pages/_pagename.scss";
+
+
+body {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+a {
+  color: $other-primary;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Gill Sans", Georgia, sans-serif;
+}
+
+
+article.center p {
+  color: black;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+article.center h1 {
+  color: $primary-color;
+}
+
+
+
+.region-footer a {
+  color: $complementary;
+}
+
+.region h2 {
+  color: $primary-color;
+  transform: rotate(-8deg);
+  text-align: center;
+  text-shadow:
+     3px  3px 0 #000,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+article.center h4 {
+  // color: $primary-color;
+  // transform: rotate(4deg);
+  text-align: right;
+  position: relative;
+  padding-right: 10px;
+  margin-bottom: 0px;
+}
+
+
+.region ul {
+  list-style: none;
+}
+
+
+
+
+
+/* Zen grids layout */
+.container {
+  @include zen-grid-container;
+  // @include zen-grid-background();
+
+  // background-color: #666370; // Old browsers
+  // @include filter-gradient(#ffffff, #9b7874, horizontal); // IE6-9
+  // @include background-image(linear-gradient(left, #ffffff 0%, #99544c 100%));
+  // @include background-image(linear-gradient(left, #ffffff 0%, #000000 100%));
+
+  // background: url('../images/crazy_house.jpg');
+  background: #F4E6E1;
+
+  // background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+  @include zen-grid-item(2, 1);
+  @include our-border();
+
+}
+
+.block_a, .block_b {
+  @include our-border();
+  border-left-style: solid;
+}
+
+.block_a {
+  @include zen-grid-item(1, 1, right);
+  // border-bottom-style: solid;
+  background: white;
+  // mix-blend-mode: exclusion;
+}
+
+.block_b {
+  @include zen-clear(right);
+  @include zen-grid-item(1, 1, right);
+  border-bottom-style: solid;
+  // background: url('../images/ha_giang.jpg');
+  background: white;
+  // mix-blend-mode: exclusion;
+}
+
+.footer {
+  @include zen-clear(left);
+  @include zen-grid-item(2, 1, left, 3, 0px);
+  // @include our-border();
+  // background: white;
+  margin-left: 8px;
+  // border-top-style: solid;
+  // border-right-style: solid;
+}
