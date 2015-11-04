@@ -1,0 +1,53 @@
+body {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  color: $other-primary;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Gill Sans", Georgia, sans-serif;
+}
+
+
+article.center p {
+  color: black;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+article.center h1 {
+  color: $primary-color;
+}
+
+
+
+.footer a {
+  color: $complementary;
+}
+
+aside h2 {
+  color: $primary-color;
+  transform: rotate(-8deg);
+  text-align: center;
+}
+
+article.center h4 {
+  // text-align: right;
+  position: relative;
+  padding-right: 10px;
+  margin-bottom: 0px;
+}
+
+
+.region ul {
+  list-style: none;
+}

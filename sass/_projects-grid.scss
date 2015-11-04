@@ -3,9 +3,11 @@ $zen-column-count: 10;
 $zen-gutter-width: 5px;
 
 
+
+
 .projects-container {
   @include zen-grid-container;
-  @include zen-grid-background();
+  // @include zen-grid-background();
 }
 
 .project1 {
@@ -17,7 +19,7 @@ $zen-gutter-width: 5px;
 }
 
 .project3 {
-  @include zen-clear(both);
+  @include zen-clear();
   @include zen-grid-item(4, 1);
 }
 
@@ -26,29 +28,13 @@ $zen-gutter-width: 5px;
 }
 
 .project5 {
-  @include zen-clear(right);
+  @include zen-clear();
   @include zen-grid-item(6, 5);
 }
 
 
-// Put $skill-count skills into 2 rows
-// Using Sass, Zen grids and CSS3 nth-child selector (from IE9)
-// @for $i from 1 through $skill-count {
-//   .skill:nth-child(#{$i}) {
-//     // background: darken($background-color, $i * 2);
-//
-//     @if $i <= $skill-count/2 {
-//       @include zen-grid-item(1,$i);
-//
-//     }
-//     @else {
-//       $second-row-index: $i - ($skill-count / 2);
-//       @include zen-grid-item(1, $second-row-index);
-//     }
-//
-//     // Put the clear in the middle
-//     @if $i == $skill-count/2 + 1 {
-//       @include zen-clear(both);
-//     }
-//   }
-// }
+.project1 img, .project2 img, .project3 img, .project4 img, .project5 img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
