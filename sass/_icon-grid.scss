@@ -1,0 +1,36 @@
+/* Zen grids icons layout */
+$zen-column-count: 4;
+$zen-gutter-width: 0px;
+
+$skill-count: 8;
+$background-color: lighten(#F4E6E1, 50);
+
+.icon-container {
+  @include zen-grid-container;
+  @include zen-grid-background();
+  background: $background-color;
+  text-align: center;
+}
+
+
+// Put $skill-count skills into 2 rows
+// Using Sass, Zen grids and CSS3 nth-child selector (from IE9)
+@for $i from 1 through $skill-count {
+  .skill:nth-child(#{$i}) {
+    // background: darken($background-color, $i * 2);
+
+    @if $i <= $skill-count/2 {
+      @include zen-grid-item(1,$i);
+
+    }
+    @else {
+      $second-row-index: $i - ($skill-count / 2);
+      @include zen-grid-item(1, $second-row-index);
+    }
+
+    // Put the clear in the middle
+    @if $i == $skill-count/2 + 1 {
+      @include zen-clear(both);
+    }
+  }
+}

@@ -68,18 +68,10 @@ aside h2 {
   color: $primary-color;
   transform: rotate(-8deg);
   text-align: center;
-  text-shadow:
-     3px  3px 0 #000,
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
 }
 
 article.center h4 {
-  // color: $primary-color;
-  // transform: rotate(4deg);
-  text-align: right;
+  // text-align: right;
   position: relative;
   padding-right: 10px;
   margin-bottom: 0px;
@@ -133,7 +125,7 @@ article.center h4 {
 .block_b {
   @include zen-clear(right);
   @include zen-grid-item(1, 1, right);
-  border-bottom-style: solid;
+  // border-bottom-style: solid;
   // background: url('../images/ha_giang.jpg');
   background: white;
   // mix-blend-mode: exclusion;
@@ -148,3 +140,8 @@ article.center h4 {
   // border-top-style: solid;
   // border-right-style: solid;
 }
+
+// This has to be before the icon grid because lexical scope in HTML/CSS
+@import "_projects-grid.scss";
+
+@import "_icon-grid.scss";

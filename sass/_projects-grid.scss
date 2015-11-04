@@ -1,0 +1,54 @@
+/* Zen grids icons layout */
+$zen-column-count: 10;
+$zen-gutter-width: 5px;
+
+
+.projects-container {
+  @include zen-grid-container;
+  @include zen-grid-background();
+}
+
+.project1 {
+  @include zen-grid-item(7, 1);
+}
+
+.project2 {
+  @include zen-grid-item(3, 8);
+}
+
+.project3 {
+  @include zen-clear(both);
+  @include zen-grid-item(4, 1);
+}
+
+.project4 {
+  @include zen-grid-item(3, 5);
+}
+
+.project5 {
+  @include zen-clear(right);
+  @include zen-grid-item(6, 5);
+}
+
+
+// Put $skill-count skills into 2 rows
+// Using Sass, Zen grids and CSS3 nth-child selector (from IE9)
+// @for $i from 1 through $skill-count {
+//   .skill:nth-child(#{$i}) {
+//     // background: darken($background-color, $i * 2);
+//
+//     @if $i <= $skill-count/2 {
+//       @include zen-grid-item(1,$i);
+//
+//     }
+//     @else {
+//       $second-row-index: $i - ($skill-count / 2);
+//       @include zen-grid-item(1, $second-row-index);
+//     }
+//
+//     // Put the clear in the middle
+//     @if $i == $skill-count/2 + 1 {
+//       @include zen-clear(both);
+//     }
+//   }
+// }
