@@ -161,7 +161,7 @@ article.center h4 {
   clear: both;
 }
 
-/* line 13, ../sass/_projects-grid.scss */
+/* line 15, ../sass/_projects-grid.scss */
 .project1 {
   float: left;
   width: 70%;
@@ -176,7 +176,7 @@ article.center h4 {
   word-wrap: break-word;
 }
 
-/* line 17, ../sass/_projects-grid.scss */
+/* line 19, ../sass/_projects-grid.scss */
 .project2 {
   float: left;
   width: 30%;
@@ -191,7 +191,7 @@ article.center h4 {
   word-wrap: break-word;
 }
 
-/* line 21, ../sass/_projects-grid.scss */
+/* line 23, ../sass/_projects-grid.scss */
 .project3 {
   clear: left;
   float: left;
@@ -207,7 +207,7 @@ article.center h4 {
   word-wrap: break-word;
 }
 
-/* line 26, ../sass/_projects-grid.scss */
+/* line 28, ../sass/_projects-grid.scss */
 .project4 {
   float: left;
   width: 30%;
@@ -222,7 +222,7 @@ article.center h4 {
   word-wrap: break-word;
 }
 
-/* line 30, ../sass/_projects-grid.scss */
+/* line 32, ../sass/_projects-grid.scss */
 .project5 {
   clear: left;
   float: left;
@@ -238,10 +238,16 @@ article.center h4 {
   word-wrap: break-word;
 }
 
-/* line 36, ../sass/_projects-grid.scss */
+/* line 37, ../sass/_projects-grid.scss */
+.project1, .project2, .project3, .project4, .project5 {
+  border: 1px dashed red;
+}
+
+/* line 41, ../sass/_projects-grid.scss */
 .project1 img, .project2 img, .project3 img, .project4 img, .project5 img {
   max-width: 100%;
   max-height: 100%;
+  margin: 0;
 }
 
 /* Zen grids icons layout */
