@@ -10,18 +10,34 @@ $(document).ready(function() {
       .appendTo('#slideshow');
   }, 4000);
 
+  var expanded = null;
 
-  $('h2#music-header').click(function() {
-    $('div#music-content').toggle(500);
-    $('div.music')
-  });
 
-  $('h2#video-header').click(function() {
-    $('div#video-content').toggle(500);
-  });
 
-  $('h2#projects-header').click(function() {
-    $('div#projects-content').toggle(500);
-  });
+
+
+  var expandSquare = function(selector, small, big) {
+    var width, padding;
+    $(selector).click(function(event) {
+      // Toggle width and padding
+      width = (width == big ? small : big);
+      padding = width;
+
+      $(this).animate({
+        width: width,
+        paddingBottom: padding,
+      }, 1000);
+
+      // Set expanded to the currently expanded box
+      if (width == big) {
+        expanded = selector;
+        console.log('expanded: ' + expanded);
+      }
+    });
+  }
+
+  expandSquare('div#projects', '15%', '50%');
+  expandSquare('div#music', '15%', '50%');
+  expandSquare('div#video', '15%', '50%');
 
 });

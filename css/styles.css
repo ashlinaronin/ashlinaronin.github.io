@@ -105,8 +105,14 @@ div#projects #music-content, div#projects #video-content, div#projects #projects
   padding-bottom: 15%;
 }
 
+/* line 46, ../sass/pages/_splash.scss */
+.expanded {
+  width: 40%;
+  background: red;
+}
+
 /* Zen grids layout */
-/* line 75, ../sass/pages/_splash.scss */
+/* line 90, ../sass/pages/_splash.scss */
 h1#splash-header {
   color: #ff5a5f;
   transform: rotate(-2deg);
@@ -114,34 +120,17 @@ h1#splash-header {
   margin: none;
 }
 
-/* line 83, ../sass/pages/_splash.scss */
-#music-header, #video-header, #projects-header {
+/* line 98, ../sass/pages/_splash.scss */
+#projects, #music, #video {
   cursor: pointer;
 }
 
-/* line 87, ../sass/pages/_splash.scss */
+/* line 102, ../sass/pages/_splash.scss */
 #music, #video {
   border-top-style: none;
 }
 
-/* line 92, ../sass/pages/_splash.scss */
-#social {
-  clear: left;
-  float: left;
-  width: 300%;
-  margin-left: 0%;
-  margin-right: -300%;
-  padding-left: 10px;
-  padding-right: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  border: 1px solid black;
-}
-
-/* line 101, ../sass/pages/_splash.scss */
+/* line 116, ../sass/pages/_splash.scss */
 #music, #video, #projects, #social {
   padding-left: 10px;
   padding-right: 10px;

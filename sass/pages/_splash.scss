@@ -32,7 +32,22 @@ div#projects, div#music, div#video {
 #projects, #music, #video {
   border: 1px solid black;
   width: 15%;
+  // height: 15%;
   padding-bottom: 15%;
+  // transition: all 0.4s ease-out;
+  // position: relative;
+}
+
+// #projects-content, #music-content, #video-content {
+//   width: 40%;
+//   padding-bottom: 40%;
+// }
+
+.expanded {
+  width: 40%;
+  // padding-bottom: 40%;
+  // width: 600px;
+  background: red;
 }
 
 
@@ -80,7 +95,7 @@ h1#splash-header {
   margin: none;
 }
 
-#music-header, #video-header, #projects-header {
+#projects, #music, #video {
   cursor: pointer;
 }
 
@@ -89,13 +104,13 @@ h1#splash-header {
 }
 
 
-#social {
-  @include zen-clear();
-  @include zen-grid-item(3, 1);
-  @include black-border();
-  // border-right-style: none;
-  // border-bottom-style: none;
-}
+// #social {
+//   @include zen-clear();
+//   @include zen-grid-item(3, 1);
+//   @include black-border();
+//   // border-right-style: none;
+//   // border-bottom-style: none;
+// }
 
 
 #music, #video, #projects, #social {
