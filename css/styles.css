@@ -125,12 +125,12 @@ h1#splash-header {
   cursor: pointer;
 }
 
-/* line 102, ../sass/pages/_splash.scss */
+/* line 103, ../sass/pages/_splash.scss */
 #music, #video {
-  border-top-style: none;
+  margin-top: -1px;
 }
 
-/* line 116, ../sass/pages/_splash.scss */
+/* line 118, ../sass/pages/_splash.scss */
 #music, #video, #projects, #social {
   padding-left: 10px;
   padding-right: 10px;
