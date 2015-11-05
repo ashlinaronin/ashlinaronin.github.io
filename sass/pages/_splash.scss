@@ -95,9 +95,17 @@ h1#splash-header {
   margin: none;
 }
 
-#projects, #music, #video {
-  cursor: pointer;
+
+
+
+.nw-resize {
+  cursor: nw-resize;
 }
+
+.se-resize {
+  cursor: se-resize;
+}
+
 
 // Eliminate double border effect between music and video
 #music, #video {

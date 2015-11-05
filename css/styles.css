@@ -120,17 +120,22 @@ h1#splash-header {
   margin: none;
 }
 
-/* line 98, ../sass/pages/_splash.scss */
-#projects, #music, #video {
-  cursor: pointer;
+/* line 101, ../sass/pages/_splash.scss */
+.nw-resize {
+  cursor: nw-resize;
 }
 
-/* line 103, ../sass/pages/_splash.scss */
+/* line 105, ../sass/pages/_splash.scss */
+.se-resize {
+  cursor: se-resize;
+}
+
+/* line 111, ../sass/pages/_splash.scss */
 #music, #video {
   margin-top: -1px;
 }
 
-/* line 118, ../sass/pages/_splash.scss */
+/* line 126, ../sass/pages/_splash.scss */
 #music, #video, #projects, #social {
   padding-left: 10px;
   padding-right: 10px;
