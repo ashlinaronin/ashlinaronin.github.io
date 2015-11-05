@@ -18,24 +18,30 @@ $zen-gutter-width: 0px;
   // background-blend-mode: screen;
   // background-repeat: no-repeat;
   // background-size: cover;
-  background: black;
+  // background: black;
 }
 
 
-#meatballs {
+#slideshow {
   @include zen-grid-item(10, 1);
   @include our-border();
+  // position: relative;
+  z-index: 0;
 }
 
 .block_a, .block_b {
   @include our-border();
   border-left-style: solid;
+  // z-index: 99;
+  z-index: 3;
+  position: relative;
+  background: white;
 }
 
 .block_a {
   @include zen-grid-item(3, 1, right);
   // border-bottom-style: solid;
-  background: white;
+
   // mix-blend-mode: exclusion;
 }
 
@@ -44,43 +50,7 @@ $zen-gutter-width: 0px;
   @include zen-grid-item(3, 1, right);
   border-bottom-style: solid;
   // background: url('../images/ha_giang.jpg');
-  background: white;
+
   // mix-blend-mode: exclusion;
   padding-left: 20px;
-}
-
-
-
-#hog-heave {
-  @include zen-clear();
-  @include zen-grid-item(3, 1);
-  @include our-border();
-  border-left-style: solid;
-  border-bottom-style: solid;
-}
-
-
-#trump {
-  @include zen-grid-item(3, 8);
-  @include our-border();
-  border-top-style: solid;
-  border-left-style: solid;
-
-}
-
-
-
-
-
-
-
-
-.footer {
-  @include zen-clear(left);
-  @include zen-grid-item(2, 1, left, 3, 0px);
-  // @include our-border();
-  // background: white;
-  margin-left: 8px;
-  // border-top-style: solid;
-  // border-right-style: solid;
 }

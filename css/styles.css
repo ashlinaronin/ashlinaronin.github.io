@@ -67,10 +67,6 @@ img {
 }
 
 /* Zen grids layout */
-/* line 6, ../sass/_main-grid.scss */
-.container {
-  background: black;
-}
 /* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
@@ -82,7 +78,7 @@ img {
 }
 
 /* line 25, ../sass/_main-grid.scss */
-#meatballs {
+#slideshow {
   float: left;
   width: 100%;
   margin-left: 0%;
@@ -96,16 +92,20 @@ img {
   word-wrap: break-word;
   border-width: 1px;
   border-color: #740004;
+  z-index: 0;
 }
 
-/* line 30, ../sass/_main-grid.scss */
+/* line 32, ../sass/_main-grid.scss */
 .block_a, .block_b {
   border-width: 1px;
   border-color: #740004;
   border-left-style: solid;
+  z-index: 3;
+  position: relative;
+  background: white;
 }
 
-/* line 35, ../sass/_main-grid.scss */
+/* line 41, ../sass/_main-grid.scss */
 .block_a {
   float: right;
   width: 30%;
@@ -118,10 +118,9 @@ img {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  background: white;
 }
 
-/* line 42, ../sass/_main-grid.scss */
+/* line 48, ../sass/_main-grid.scss */
 .block_b {
   clear: right;
   float: right;
@@ -136,64 +135,7 @@ img {
   box-sizing: border-box;
   word-wrap: break-word;
   border-bottom-style: solid;
-  background: white;
   padding-left: 20px;
-}
-
-/* line 54, ../sass/_main-grid.scss */
-#hog-heave {
-  clear: left;
-  float: left;
-  width: 30%;
-  margin-left: 0%;
-  margin-right: -30%;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  border-width: 1px;
-  border-color: #740004;
-  border-left-style: solid;
-  border-bottom-style: solid;
-}
-
-/* line 63, ../sass/_main-grid.scss */
-#trump {
-  float: left;
-  width: 30%;
-  margin-left: 70%;
-  margin-right: -100%;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  border-width: 1px;
-  border-color: #740004;
-  border-top-style: solid;
-  border-left-style: solid;
-}
-
-/* line 78, ../sass/_main-grid.scss */
-.footer {
-  clear: left;
-  float: left;
-  width: 66.66667%;
-  margin-left: 0%;
-  margin-right: -66.66667%;
-  padding-left: 0px;
-  padding-right: 0px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 8px;
 }
 
 /* Zen grids icons layout */
@@ -336,4 +278,23 @@ img {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
+}
+
+/* line 1, ../sass/_slideshow.scss */
+#slideshow {
+  margin: 0px auto;
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 11, ../sass/_slideshow.scss */
+#slideshow > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
