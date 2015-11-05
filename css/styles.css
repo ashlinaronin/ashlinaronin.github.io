@@ -77,23 +77,23 @@ li {
   font-size: 40px;
 }
 
-/* line 6, ../sass/pages/_splash.scss */
+/* line 10, ../sass/pages/_splash.scss */
 div.projects h1, div.projects h2, div.projects h3, div.projects h4, div.projects h5, div.projects h6, div.music h1, div.music h2, div.music h3, div.music h4, div.music h5, div.music h6, div.video h1, div.video h2, div.video h3, div.video h4, div.video h5, div.video h6 {
   margin-bottom: 0;
 }
-/* line 10, ../sass/pages/_splash.scss */
+/* line 14, ../sass/pages/_splash.scss */
 div.projects h2, div.music h2, div.video h2 {
   margin-top: 0;
 }
-/* line 14, ../sass/pages/_splash.scss */
+/* line 18, ../sass/pages/_splash.scss */
 div.projects h4, div.music h4, div.video h4 {
   margin-top: 5px;
 }
-/* line 18, ../sass/pages/_splash.scss */
+/* line 22, ../sass/pages/_splash.scss */
 div.projects p, div.music p, div.video p {
   margin-top: 0;
 }
-/* line 22, ../sass/pages/_splash.scss */
+/* line 26, ../sass/pages/_splash.scss */
 div.projects #music-content, div.projects #video-content, div.projects #projects-content, div.music #music-content, div.music #video-content, div.music #projects-content, div.video #music-content, div.video #video-content, div.video #projects-content {
   display: none;
 }
@@ -109,12 +109,12 @@ div.projects #music-content, div.projects #video-content, div.projects #projects
   clear: both;
 }
 
-/* line 38, ../sass/pages/_splash.scss */
+/* line 42, ../sass/pages/_splash.scss */
 .music, .video, .projects {
-  border: 1px solid #740004;
+  border: 1px solid black;
 }
 
-/* line 43, ../sass/pages/_splash.scss */
+/* line 48, ../sass/pages/_splash.scss */
 .projects {
   float: left;
   width: 66.66667%;
@@ -127,12 +127,12 @@ div.projects #music-content, div.projects #video-content, div.projects #projects
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  border: 1px solid #740004;
+  border: 1px solid black;
   border-right-style: none;
   border-bottom-style: none;
 }
 
-/* line 50, ../sass/pages/_splash.scss */
+/* line 55, ../sass/pages/_splash.scss */
 .music-video {
   float: left;
   width: 33.33333%;
@@ -147,24 +147,25 @@ div.projects #music-content, div.projects #video-content, div.projects #projects
   word-wrap: break-word;
 }
 
-/* line 56, ../sass/pages/_splash.scss */
-#splash-header {
+/* line 63, ../sass/pages/_splash.scss */
+h1#splash-header {
   color: #ff5a5f;
+  transform: rotate(-2deg);
   padding-left: 20px;
   margin: none;
 }
 
-/* line 64, ../sass/pages/_splash.scss */
+/* line 71, ../sass/pages/_splash.scss */
 #music-header, #video-header, #projects-header {
   cursor: pointer;
 }
 
-/* line 68, ../sass/pages/_splash.scss */
+/* line 75, ../sass/pages/_splash.scss */
 .video {
   border-top-style: none;
 }
 
-/* line 78, ../sass/pages/_splash.scss */
+/* line 85, ../sass/pages/_splash.scss */
 .social {
   clear: left;
   float: left;
@@ -178,10 +179,10 @@ div.projects #music-content, div.projects #video-content, div.projects #projects
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  border: 1px solid #740004;
+  border: 1px solid black;
 }
 
-/* line 87, ../sass/pages/_splash.scss */
+/* line 94, ../sass/pages/_splash.scss */
 .music, .video, .projects, .social {
   padding-left: 10px;
   padding-right: 10px;
