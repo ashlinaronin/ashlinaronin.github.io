@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   var expanded = null;
 
-
   var expandSquare = function(selector, small, big, speed) {
     // locally scoped width and padding for toggle on the given div
     var width = small;
@@ -11,40 +10,30 @@ $(document).ready(function() {
 
       // Only expand it if there is no other square expanded
       if (!expanded) {
-        $(this).animate({width: big, paddingBottom: big}, speed);
-
-        // Set currently expanded value and adjust cursors
+        grow(selector);
         expanded = selector;
-        $(this).addClass('nw-resize');
-        $(this).removeClass('se-resize');
-
       } else if (expanded === selector) {
-        // width = padding = small;
-        $(this).animate({width: small, paddingBottom: small}, speed);
-
-        // Remove currently expanded value and adjust cursors
+        shrink(selector);
         expanded = null;
-        $(this).addClass('se-resize');
-        $(this).removeClass('nw-resize')
       } else if ((expanded) && (expanded !== selector)) {
-        $(expanded).animate({width: small, paddingBottom: small}, speed);
-        $(expanded).addClass('se-resize');
-        $(expanded).removeClass('nw-resize');
-
-        $(this).animate({width: big, paddingBottom: big}, speed);
+        shrink(expanded);
+        grow(selector);
         expanded = selector;
-        $(this).addClass('nw-resize');
-        $(this).removeClass('se-resize');
-        // $(expanded).animate()
-        console.log('trying to open ' + selector + ' but ' + expanded + ' is expanded');
       }
-
-      console.log('in ' + selector + ' after animation, expanded: ' + expanded);
     });
   }
 
-  var shrink = function(selector) {}
-  var grow = function(selector) {}
+  var shrink = function(selector) {
+    $(selector).animate({width: small, paddingBottom: small}, speed);
+    $(selector).addClass('se-resize');
+    $(selector).removeClass('nw-resize');
+  }
+
+  var grow = function(selector) {
+    $(selector).animate({width: big, paddingBottom: big}, speed);
+    $(selector).addClass('nw-resize');
+    $(selector).removeClass('se-resize');
+  }
 
 
   // Generate event handlers for 3 divs with given sizes
@@ -56,6 +45,3 @@ $(document).ready(function() {
   expandSquare('div#video', small, big, speed);
 
 });
-
-// Toggle width and padding
-// width = (width == big ? small : big);
