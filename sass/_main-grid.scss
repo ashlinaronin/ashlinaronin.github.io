@@ -6,19 +6,6 @@ $zen-gutter-width: 0px;
 .container {
   @include zen-grid-container;
   // @include zen-grid-background();
-
-  // background-color: #666370; // Old browsers
-  // @include filter-gradient(#ffffff, #9b7874, horizontal); // IE6-9
-  // @include background-image(linear-gradient(right, #ffffff 0%, #99544c 100%));
-  // @include background-image(linear-gradient(left, #ffffff 0%, #000000 100%));
-
-
-  // background: #F4E6E1;
-
-  // background-blend-mode: screen;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background: black;
 }
 
 
@@ -32,7 +19,6 @@ $zen-gutter-width: 0px;
 .block_a, .block_b {
   @include our-border();
   border-left-style: solid;
-  // z-index: 99;
   z-index: 3;
   position: relative;
   background: white;
@@ -40,17 +26,11 @@ $zen-gutter-width: 0px;
 
 .block_a {
   @include zen-grid-item(3, 1, right);
-  // border-bottom-style: solid;
-
-  // mix-blend-mode: exclusion;
 }
 
 .block_b {
   @include zen-clear(right);
   @include zen-grid-item(3, 1, right);
   border-bottom-style: solid;
-  // background: url('../images/ha_giang.jpg');
-
-  // mix-blend-mode: exclusion;
   padding-left: 20px;
 }
