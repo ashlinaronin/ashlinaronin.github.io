@@ -66,6 +66,11 @@ img {
   display: block;
 }
 
+/* line 65, ../sass/_globals.scss */
+.skill {
+  font-size: 40px;
+}
+
 /* Zen grids layout */
 /* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
@@ -221,6 +226,7 @@ img {
 
 /* line 19, ../sass/_icon-grid.scss */
 .skill:nth-child(5) {
+  padding-top: 15px;
   float: left;
   width: 25%;
   margin-left: 0%;
@@ -237,6 +243,7 @@ img {
 
 /* line 19, ../sass/_icon-grid.scss */
 .skill:nth-child(6) {
+  padding-top: 15px;
   float: left;
   width: 25%;
   margin-left: 25%;
@@ -252,6 +259,7 @@ img {
 
 /* line 19, ../sass/_icon-grid.scss */
 .skill:nth-child(7) {
+  padding-top: 15px;
   float: left;
   width: 25%;
   margin-left: 50%;
@@ -267,6 +275,7 @@ img {
 
 /* line 19, ../sass/_icon-grid.scss */
 .skill:nth-child(8) {
+  padding-top: 15px;
   float: left;
   width: 25%;
   margin-left: 75%;
