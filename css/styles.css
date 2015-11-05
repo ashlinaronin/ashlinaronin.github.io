@@ -66,18 +66,102 @@ img {
   display: block;
 }
 
-/* line 65, ../sass/_globals.scss */
+/* line 63, ../sass/_globals.scss */
+li {
+  list-style: none;
+  margin-left: 0px;
+}
+
+/* line 71, ../sass/_globals.scss */
 .skill {
   font-size: 40px;
 }
 
+/* line 3, ../sass/pages/_splash.scss */
+div.projects h1, div.projects h2, div.projects h3, div.projects h4, div.projects h5, div.projects h6, div.music h1, div.music h2, div.music h3, div.music h4, div.music h5, div.music h6, div.video h1, div.video h2, div.video h3, div.video h4, div.video h5, div.video h6 {
+  margin-bottom: 0;
+}
+/* line 8, ../sass/pages/_splash.scss */
+div.projects h2, div.music h2, div.video h2 {
+  margin-top: 0;
+}
+/* line 12, ../sass/pages/_splash.scss */
+div.projects h4, div.music h4, div.video h4 {
+  margin-top: 5px;
+}
+/* line 16, ../sass/pages/_splash.scss */
+div.projects p, div.music p, div.video p {
+  margin-top: 0;
+}
+/* line 20, ../sass/pages/_splash.scss */
+div.projects #music-content, div.projects #video-content, div.music #music-content, div.music #video-content, div.video #music-content, div.video #video-content {
+  display: none;
+}
+
 /* Zen grids layout */
-/* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+/* line 45, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table;
 }
-/* line 50, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+/* line 50, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+.container:after {
+  clear: both;
+}
+
+/* line 36, ../sass/pages/_splash.scss */
+.projects {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -66.66667%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 40, ../sass/pages/_splash.scss */
+.music-video {
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 51, ../sass/pages/_splash.scss */
+.social {
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* Zen grids layout */
+/* line 45, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+/* line 50, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both;
 }
@@ -154,12 +238,12 @@ img {
   background: white;
   text-align: center;
 }
-/* line 45, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+/* line 45, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .icon-container:before, .icon-container:after {
   content: "";
   display: table;
 }
-/* line 50, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
+/* line 50, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
 .icon-container:after {
   clear: both;
 }
