@@ -6,8 +6,5 @@ $complementary: darken(adjust_hue($primary-color, 197), 54);
 
 
 @mixin our-border() {
-  border-width: 1px;
-  // border-style: none;
-  // border-bottom-style: solid;
-  border-color: $darker-primary;
+  border: 1px solid $darker-primary;
 }

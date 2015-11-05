@@ -1,9 +1,11 @@
+// there may be a better way to deal with padding than
+// simply overwriting zen's padding but its ok for now
+
 // Eliminate spacing between headers and paragraphs
 div.projects, div.music, div.video {
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
   }
-
 
   h2 {
     margin-top: 0;
@@ -17,14 +19,14 @@ div.projects, div.music, div.video {
     margin-top: 0;
   }
 
-  #music-content, #video-content {
+  #music-content, #video-content, #projects-content {
     display: none;
   }
 }
 
 
 $zen-column-count: 3;
-$zen-gutter-width: 10px;
+$zen-gutter-width: 0;
 
 
 /* Zen grids layout */
@@ -33,13 +35,38 @@ $zen-gutter-width: 10px;
   // @include zen-grid-background();
 }
 
+.music, .video, .projects {
+  @include our-border;
+
+}
+
 .projects {
   @include zen-grid-item(2, 1);
+  @include our-border;
+  border-right-style: none;
+  border-bottom-style: none;
 }
 
 .music-video {
   @include zen-grid-item(1, 3);
   // border-bottom-style: solid;
+}
+
+
+#splash-header {
+  color: $primary-color;
+  // transform: rotate(-2deg);
+  // text-align: center;
+  padding-left: 20px;
+  margin: none;
+}
+
+#music-header, #video-header, #projects-header {
+  cursor: pointer;
+}
+
+.video {
+  border-top-style: none;
 }
 
 
@@ -51,4 +78,17 @@ $zen-gutter-width: 10px;
 .social {
   @include zen-clear();
   @include zen-grid-item(3, 1);
+  @include our-border();
+  // border-right-style: none;
+  // border-bottom-style: none;
+}
+
+
+.music, .video, .projects, .social {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.music, .video {
+  // border-left-style: none;
 }

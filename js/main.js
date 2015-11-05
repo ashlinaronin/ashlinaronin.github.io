@@ -19,4 +19,8 @@ $(document).ready(function() {
     $('div#video-content').toggle(500);
   });
 
+  $('h2#projects-header').click(function() {
+    $('div#projects-content').toggle(500);
+  });
+
 });
