@@ -3,22 +3,17 @@ $(document).ready(function() {
   var expanded = null;
 
   var expandSquare = function(selector, small, big, speed) {
-    // locally scoped width and padding for toggle on the given div
-    var width = small;
-    var padding = small;
     $(selector).click(function(event) {
-
-      // Only expand it if there is no other square expanded
       if (!expanded) {
-        grow(selector);
-        expanded = selector;
-      } else if (expanded === selector) {
-        shrink(selector);
+        grow(this);
+        expanded = this;
+      } else if (expanded === this) {
+        shrink(this);
         expanded = null;
-      } else if ((expanded) && (expanded !== selector)) {
+      } else if ((expanded) && (expanded !== this)) {
         shrink(expanded);
-        grow(selector);
-        expanded = selector;
+        grow(this);
+        expanded = this;
       }
     });
   }
@@ -35,8 +30,7 @@ $(document).ready(function() {
     $(selector).removeClass('se-resize');
   }
 
-
-  // Generate event handlers for 3 divs with given sizes
+  // Generate click event handlers for 3 divs with given sizes
   var small = '15%';
   var big = '40%';
   var speed = 600;
