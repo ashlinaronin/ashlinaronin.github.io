@@ -78,76 +78,35 @@ li {
 }
 
 /* line 10, ../sass/pages/_splash.scss */
-div.projects h1, div.projects h2, div.projects h3, div.projects h4, div.projects h5, div.projects h6, div.music h1, div.music h2, div.music h3, div.music h4, div.music h5, div.music h6, div.video h1, div.video h2, div.video h3, div.video h4, div.video h5, div.video h6 {
+div#projects h1, div#projects h2, div#projects h3, div#projects h4, div#projects h5, div#projects h6, div#music h1, div#music h2, div#music h3, div#music h4, div#music h5, div#music h6, div#video h1, div#video h2, div#video h3, div#video h4, div#video h5, div#video h6 {
   margin-bottom: 0;
 }
 /* line 14, ../sass/pages/_splash.scss */
-div.projects h2, div.music h2, div.video h2 {
+div#projects h2, div#music h2, div#video h2 {
   margin-top: 0;
 }
 /* line 18, ../sass/pages/_splash.scss */
-div.projects h4, div.music h4, div.video h4 {
+div#projects h4, div#music h4, div#video h4 {
   margin-top: 5px;
 }
 /* line 22, ../sass/pages/_splash.scss */
-div.projects p, div.music p, div.video p {
+div#projects p, div#music p, div#video p {
   margin-top: 0;
 }
 /* line 26, ../sass/pages/_splash.scss */
-div.projects #music-content, div.projects #video-content, div.projects #projects-content, div.music #music-content, div.music #video-content, div.music #projects-content, div.video #music-content, div.video #video-content, div.video #projects-content {
+div#projects #music-content, div#projects #video-content, div#projects #projects-content, div#music #music-content, div#music #video-content, div#music #projects-content, div#video #music-content, div#video #video-content, div#video #projects-content {
   display: none;
 }
 
+/* line 32, ../sass/pages/_splash.scss */
+#projects, #music, #video {
+  border: 1px solid black;
+  width: 15%;
+  padding-bottom: 15%;
+}
+
 /* Zen grids layout */
-/* line 45, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
-.container:before, .container:after {
-  content: "";
-  display: table;
-}
-/* line 50, ../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.5/stylesheets/zen/_grids.scss */
-.container:after {
-  clear: both;
-}
-
-/* line 42, ../sass/pages/_splash.scss */
-.music, .video, .projects {
-  border: 1px solid black;
-}
-
-/* line 48, ../sass/pages/_splash.scss */
-.projects {
-  float: left;
-  width: 66.66667%;
-  margin-left: 0%;
-  margin-right: -66.66667%;
-  padding-left: 0;
-  padding-right: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  border: 1px solid black;
-  border-right-style: none;
-  border-bottom-style: none;
-}
-
-/* line 55, ../sass/pages/_splash.scss */
-.music-video {
-  float: left;
-  width: 33.33333%;
-  margin-left: 66.66667%;
-  margin-right: -100%;
-  padding-left: 0;
-  padding-right: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-/* line 63, ../sass/pages/_splash.scss */
+/* line 75, ../sass/pages/_splash.scss */
 h1#splash-header {
   color: #ff5a5f;
   transform: rotate(-2deg);
@@ -155,25 +114,25 @@ h1#splash-header {
   margin: none;
 }
 
-/* line 71, ../sass/pages/_splash.scss */
+/* line 83, ../sass/pages/_splash.scss */
 #music-header, #video-header, #projects-header {
   cursor: pointer;
 }
 
-/* line 75, ../sass/pages/_splash.scss */
-.video {
+/* line 87, ../sass/pages/_splash.scss */
+#music, #video {
   border-top-style: none;
 }
 
-/* line 85, ../sass/pages/_splash.scss */
-.social {
+/* line 92, ../sass/pages/_splash.scss */
+#social {
   clear: left;
   float: left;
-  width: 100%;
+  width: 300%;
   margin-left: 0%;
-  margin-right: -100%;
-  padding-left: 0;
-  padding-right: 0;
+  margin-right: -300%;
+  padding-left: 10px;
+  padding-right: 10px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -182,8 +141,8 @@ h1#splash-header {
   border: 1px solid black;
 }
 
-/* line 94, ../sass/pages/_splash.scss */
-.music, .video, .projects, .social {
+/* line 101, ../sass/pages/_splash.scss */
+#music, #video, #projects, #social {
   padding-left: 10px;
   padding-right: 10px;
 }

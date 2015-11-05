@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   $('h2#music-header').click(function() {
     $('div#music-content').toggle(500);
+    $('div.music')
   });
 
   $('h2#video-header').click(function() {
