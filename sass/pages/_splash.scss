@@ -25,15 +25,19 @@ div#projects, div#music, div#video {
 
   #music-content, #video-content, #projects-content {
     display: none;
+    width: 400px;
+    height: 400px;
   }
 }
 
 
 #projects, #music, #video {
   border: 1px solid black;
-  width: 15%;
-  // height: 15%;
-  padding-bottom: 15%;
+  // width: 15%;
+  // // height: 15%;
+  // padding-bottom: 15%;
+  width: 150px;
+  height: 150px;
   // transition: all 0.4s ease-out;
   // position: relative;
 }
