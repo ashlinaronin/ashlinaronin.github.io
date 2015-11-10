@@ -19,38 +19,55 @@ $(document).ready(function() {
   }
 
   var shrink = function(selector) {
-    // var contentChild = '#' + selector.attributes[0].value + '-content';
-    // $(selector).find(contentChild).toggle(speed);
+    var shrinker = function() {
+      TweenLite.to(selector, speed,
+        {width: small, height: small, ease:Power2.easeInOut
+      });
+    }
 
-    $(selector).animate({width: small, paddingBottom: small}, speed);
+    var hideText = function() {
+      var thisContent = $(selector).find(':nth-child(2)');
+      // var hider = new TweenLite.to(thisContent, )
+      // $(selector).find(':nth-child(2)').hide();
+      // var slowerSpeed = speed/2;
+      TweenLite.to(thisContent, speed/2,
+        {autoAlpha:0, onComplete: shrinker});
+    }
+
+    hideText();
+
+    // Switch pointer styles
     $(selector).addClass('se-resize');
     $(selector).removeClass('nw-resize');
-    // $(selector + '-content').toggle();
-    // console.dir(selector);
-    // var contentChild = '#' + selector.attributes[0].value + '-content';
-    // console.log('contentChild: ' + contentChild);
-    // console.dir(gotit);
   }
 
   var grow = function(selector) {
-    // var contentChild = '#' + selector.attributes[0].value + '-content';
-    // $(selector).find(contentChild).toggle(speed);
+    var showText = function() {
+      var thisContent = $(selector).find(':nth-child(2)');
+      TweenLite.to(thisContent, speed/2, {autoAlpha:1});
+    }
 
-    $(selector).animate({width: big, paddingBottom: big}, speed);
+    var grower = function() {
+      TweenLite.to(selector, speed,
+        {width: big, height: big, ease:Power2.easeInOut,
+        onComplete: showText}
+      );
+    }
+
+    grower();
+
+    // Switch pointer styles
     $(selector).addClass('nw-resize');
     $(selector).removeClass('se-resize');
-    // $(selector + '-content').toggle();
-    // var contentChild = '#' + selector.attributes[0].value +
-    // var lastchild = $(selector).last();
-
-    // console.dir(lastchild);
-
   }
 
   // Generate click event handlers for 3 divs with given sizes
-  var small = '15%';
-  var big = '40%';
-  var speed = 600;
+  // var small = '15%';
+  // var big = '40%';
+  // var speed = 600;
+  var small = '150px';
+  var big = '400px';
+  var speed = 1;
   expandSquare('div#projects', small, big, speed);
   expandSquare('div#music', small, big, speed);
   expandSquare('div#video', small, big, speed);
