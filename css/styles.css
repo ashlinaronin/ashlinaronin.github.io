@@ -154,18 +154,28 @@ h1#splash-header {
   padding-left: 20px;
   margin: none;
 }
+/* line 69, ../sass/pages/_splash.scss */
+h1#splash-header a {
+  color: #ff5a5f;
+  text-decoration: none;
+}
 
-/* line 71, ../sass/pages/_splash.scss */
+/* line 76, ../sass/pages/_splash.scss */
+.splash-name h3 {
+  padding-left: 20px;
+}
+
+/* line 80, ../sass/pages/_splash.scss */
 #music-header, #video-header, #projects-header {
   cursor: pointer;
 }
 
-/* line 75, ../sass/pages/_splash.scss */
+/* line 84, ../sass/pages/_splash.scss */
 .video {
   border-top-style: none;
 }
 
-/* line 85, ../sass/pages/_splash.scss */
+/* line 94, ../sass/pages/_splash.scss */
 .social {
   clear: left;
   float: left;
@@ -182,7 +192,7 @@ h1#splash-header {
   border: 1px solid black;
 }
 
-/* line 94, ../sass/pages/_splash.scss */
+/* line 103, ../sass/pages/_splash.scss */
 .music, .video, .projects, .social {
   padding-left: 10px;
   padding-right: 10px;

@@ -66,6 +66,15 @@ h1#splash-header {
   // text-align: center;
   padding-left: 20px;
   margin: none;
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    // padding-left: inherit;
+  }
+}
+
+.splash-name h3 {
+  padding-left: 20px;
 }
 
 #music-header, #video-header, #projects-header {
