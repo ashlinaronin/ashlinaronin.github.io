@@ -31,6 +31,7 @@ div.projects, div.music, div.video {
 
 $zen-column-count: 3;
 $zen-gutter-width: 0;
+$cutoff-width: 640px;
 
 
 /* Zen grids layout */
@@ -46,17 +47,36 @@ $zen-gutter-width: 0;
 }
 
 .projects {
-  @include zen-grid-item(2, 1);
-  @include black-border;
-  border-right-style: none;
   border-bottom-style: none;
+  // all stacked
+  @media screen and (max-width: $cutoff-width) {
+    @include zen-grid-item(3, 1);
+    // @include black-border;
+  }
+  // three columns
+  @media screen and (min-width: $cutoff-width) {
+    @include zen-grid-item(2, 1);
+    // @include black-border;
+    border-right-style: none;
+
+  }
 }
 
+
+
+
+
 .music-video {
-  @include zen-grid-item(1, 3);
-  // @include zen-clear();
-  // @include zen-grid-item(2, 1);
-  // border-bottom-style: solid;
+  // all stacked
+  @media screen and (max-width: $cutoff-width) {
+    @include zen-clear();
+    @include zen-grid-item(3, 1);
+  }
+  // three columns
+  @media screen and (min-width: $cutoff-width) {
+    @include zen-grid-item(1, 3);
+    border-left-style: none;
+  }
 }
 
 
@@ -73,6 +93,7 @@ h1#splash-header {
   }
 }
 
+
 .splash-name h3 {
   padding-left: 20px;
 }
@@ -85,24 +106,10 @@ h1#splash-header {
   border-top-style: none;
 }
 
-
-// .video {
-//   @include zen-clear();
-//   @include zen-grid-item(1, 3);
-// }
-
-.social {
-  @include zen-clear();
-  @include zen-grid-item(3, 1);
-  @include black-border();
-  // border-right-style: none;
-  // border-bottom-style: none;
-}
-
-
-.music, .video, .projects, .social {
+.music, .video, .projects {
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 5px;
 }
 
 .music, .video {
