@@ -100,7 +100,7 @@ p {
   font-family: monospace;
 }
 
-/* line 8, ../sass/components/_sidebar.scss */
+/* line 9, ../sass/components/_sidebar.scss */
 .sidebar {
   position: absolute;
   right: 0;
@@ -110,20 +110,21 @@ p {
   margin-right: -1px;
   border: 1px solid black;
 }
-/* line 16, ../sass/components/_sidebar.scss */
+/* line 17, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-header {
   position: relative;
   top: 25px;
   left: 0;
 }
-/* line 20, ../sass/components/_sidebar.scss */
+/* line 21, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-header h2 {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-/* line 26, ../sass/components/_sidebar.scss */
+/* line 25, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-content {
   position: relative;
   top: 80px;

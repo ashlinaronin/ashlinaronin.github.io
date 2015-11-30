@@ -3,6 +3,7 @@
   -moz-transform: rotate(#{$degrees}deg); // Firefox
   -ms-transform: rotate(#{$degrees}deg); // IE
   -o-transform: rotate(#{$degrees}deg); // Opera
+  transform: rotate(#{$degrees}deg); // future
 }
 
 .sidebar {
@@ -19,8 +20,6 @@
     left: 0;
     h2 {
       @include rotateText(-90);
-
-
     }
   }
   .sidebar-content {
@@ -29,6 +28,5 @@
     left: 0;
     padding: 5px;
     visibility: hidden;
-    // display
   }
 }
