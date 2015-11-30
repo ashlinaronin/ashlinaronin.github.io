@@ -22,57 +22,59 @@ h1, h2, h3, h4, h5 {
   font-family: "Optima", "Gill Sans", Georgia, sans-serif;
 }
 
-/* line 10, ../sass/pages/_squares.scss */
-div#projects h1, div#projects h2, div#projects h3, div#projects h4, div#projects h5, div#projects h6, div#music h1, div#music h2, div#music h3, div#music h4, div#music h5, div#music h6, div#video h1, div#video h2, div#video h3, div#video h4, div#video h5, div#video h6 {
-  margin-bottom: 0;
-}
-/* line 14, ../sass/pages/_squares.scss */
-div#projects h2, div#music h2, div#video h2 {
-  margin-top: 0;
-}
-/* line 18, ../sass/pages/_squares.scss */
-div#projects h4, div#music h4, div#video h4 {
-  margin-top: 5px;
-}
-/* line 22, ../sass/pages/_squares.scss */
-div#projects p, div#music p, div#video p {
-  margin-top: 0;
-}
-/* line 26, ../sass/pages/_squares.scss */
-div#projects #music-content, div#projects #video-content, div#projects #projects-content, div#music #music-content, div#music #video-content, div#music #projects-content, div#video #music-content, div#video #video-content, div#video #projects-content {
-  visibility: hidden;
-  width: 400px;
-  height: 400px;
-}
-
-/* line 35, ../sass/pages/_squares.scss */
-#projects, #music, #video {
+/* line 1, ../sass/pages/_squares.scss */
+.square {
   border: 1px solid black;
   width: 150px;
   height: 150px;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+/* line 11, ../sass/pages/_squares.scss */
+.square h1, .square h2, .square h3, .square h4, .square h5, .square h6 {
+  margin-bottom: 0;
+}
+/* line 12, ../sass/pages/_squares.scss */
+.square h2, .square p {
+  margin-top: 0;
+}
+/* line 13, ../sass/pages/_squares.scss */
+.square h4 {
+  margin-top: 5px;
+}
+/* line 15, ../sass/pages/_squares.scss */
+.square .square-content {
+  visibility: hidden;
+  width: 400px;
+  height: 400px;
 }
 
-/* line 44, ../sass/pages/_squares.scss */
-h1#splash-header {
+/* line 22, ../sass/pages/_squares.scss */
+h1.splash-header {
   color: #ff5a5f;
   transform: rotate(-2deg);
   padding-left: 20px;
   margin: none;
 }
 
-/* line 51, ../sass/pages/_squares.scss */
+/* line 30, ../sass/pages/_squares.scss */
 .nw-resize {
   cursor: nw-resize;
 }
 
-/* line 55, ../sass/pages/_squares.scss */
+/* line 33, ../sass/pages/_squares.scss */
 .se-resize {
   cursor: se-resize;
 }
 
-/* line 61, ../sass/pages/_squares.scss */
+/* line 39, ../sass/pages/_squares.scss */
 #music, #video {
   margin-top: -1px;
+}
+
+/* line 42, ../sass/pages/_squares.scss */
+.border-on-top {
+  z-index: 5;
 }

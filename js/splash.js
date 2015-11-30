@@ -47,6 +47,9 @@ $(document).ready(function() {
     // Switch pointer styles
     $(selector).addClass('se-resize');
     $(selector).removeClass('nw-resize');
+
+    // Hide this border to make sure other squares can show their borders
+    $(selector).removeClass('border-on-top');
   }
 
   var grow = function(selector) {
@@ -71,6 +74,9 @@ $(document).ready(function() {
     // Switch pointer styles
     $(selector).addClass('nw-resize');
     $(selector).removeClass('se-resize');
+
+    // mess with z-index to show border on top
+    $(selector).addClass('border-on-top');
   }
 
 

@@ -1,5 +1,4 @@
 $primary-color: #FF5A5F;
-// $primary-color: #00FF00;
 $darker-primary: darken($primary-color, 45);
 $other-primary: desaturate(darken($primary-color, 36), 73);
 $complementary: darken(adjust_hue($primary-color, 197), 54);
