@@ -1,25 +1,19 @@
 /* Import Zen Grids */
 /* line 1, ../sass/_globals.scss */
 body {
-  font-family: "Optima", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
 
-/* line 6, ../sass/_globals.scss */
+/* line 5, ../sass/_globals.scss */
 .container {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 12, ../sass/_globals.scss */
+/* line 11, ../sass/_globals.scss */
 a {
-  color: #663b3c;
-}
-
-/* line 16, ../sass/_globals.scss */
-h1, h2, h3, h4, h5 {
-  font-family: "Optima", "Gill Sans", Georgia, sans-serif;
+  color: black;
 }
 
 /* line 1, ../sass/pages/_squares.scss */
@@ -29,52 +23,79 @@ h1, h2, h3, h4, h5 {
   height: 150px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 5px;
   position: relative;
   z-index: 1;
 }
-/* line 11, ../sass/pages/_squares.scss */
-.square h1, .square h2, .square h3, .square h4, .square h5, .square h6 {
-  margin-bottom: 0;
-}
 /* line 12, ../sass/pages/_squares.scss */
-.square h2, .square p {
+.square h1, .square h2, .square h3, .square h4, .square h5, .square h6 {
+  margin: 0;
+  padding: 0;
+}
+/* line 16, ../sass/pages/_squares.scss */
+.square h2 {
+  padding-bottom: 5px;
+}
+/* line 19, ../sass/pages/_squares.scss */
+.square p {
   margin-top: 0;
 }
-/* line 13, ../sass/pages/_squares.scss */
-.square h4 {
-  margin-top: 5px;
-}
-/* line 15, ../sass/pages/_squares.scss */
+/* line 23, ../sass/pages/_squares.scss */
 .square .square-content {
   visibility: hidden;
   width: 400px;
   height: 400px;
 }
 
-/* line 22, ../sass/pages/_squares.scss */
-h1.splash-header {
+/* line 31, ../sass/pages/_squares.scss */
+.splash-name h1.splash-header {
   color: #ff5a5f;
-  transform: rotate(-2deg);
-  padding-left: 20px;
-  margin: none;
+  margin: 0;
+  padding-bottom: 0;
+}
+/* line 37, ../sass/pages/_squares.scss */
+.splash-name h1.splash-header a {
+  color: #ff5a5f;
+  text-decoration: none;
+}
+/* line 42, ../sass/pages/_squares.scss */
+.splash-name h3.splash-subheader {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 50px;
 }
 
-/* line 30, ../sass/pages/_squares.scss */
+/* line 52, ../sass/pages/_squares.scss */
 .nw-resize {
   cursor: nw-resize;
 }
 
-/* line 33, ../sass/pages/_squares.scss */
+/* line 55, ../sass/pages/_squares.scss */
 .se-resize {
   cursor: se-resize;
 }
 
-/* line 39, ../sass/pages/_squares.scss */
+/* line 61, ../sass/pages/_squares.scss */
 #music, #video {
   margin-top: -1px;
 }
 
-/* line 42, ../sass/pages/_squares.scss */
+/* line 64, ../sass/pages/_squares.scss */
 .border-on-top {
   z-index: 5;
+}
+
+/* line 69, ../sass/pages/_squares.scss */
+h1.splash-header, h2.square-header {
+  font-family: "AutopiaBold", Georgia, serif;
+}
+
+/* line 73, ../sass/pages/_squares.scss */
+h3, h4, h5, h6 {
+  font-family: monospace;
+}
+
+/* line 77, ../sass/pages/_squares.scss */
+p {
+  font-family: monospace;
 }
