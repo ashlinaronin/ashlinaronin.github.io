@@ -3,10 +3,11 @@
 @import "zen/background";
 
 // Definitions first
-@import "_variables.scss";
+@import "variables";
 
 // Then global styles
-@import "_globals.scss";
+@import "globals";
 
-// Then specific stuff
-@import "pages/_squares.scss";
+// Then specific components
+@import "components/squares";
+@import "components/sidebar";

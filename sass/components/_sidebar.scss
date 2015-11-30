@@ -1,0 +1,34 @@
+@mixin rotateText($degrees) {
+  -webkit-transform: rotate(#{$degrees}deg); // Safari
+  -moz-transform: rotate(#{$degrees}deg); // Firefox
+  -ms-transform: rotate(#{$degrees}deg); // IE
+  -o-transform: rotate(#{$degrees}deg); // Opera
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 130px;
+  width: 40px;
+  height: 470px;
+  margin-right: -1px;
+  border: 1px solid black;
+  .sidebar-header {
+    position: relative;
+    top: 25px;
+    left: 0;
+    h2 {
+      @include rotateText(-90);
+
+
+    }
+  }
+  .sidebar-content {
+    position: relative;
+    top: 80px;
+    left: 0;
+    padding: 5px;
+    visibility: hidden;
+    // display
+  }
+}
