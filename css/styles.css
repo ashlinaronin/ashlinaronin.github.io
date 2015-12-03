@@ -6,24 +6,24 @@ body {
 
 /* line 5, ../sass/_globals.scss */
 .container {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 /* line 11, ../sass/_globals.scss */
-h1, h2, h3, h4, h5 {
+h1, h2 {
   font-family: "AutopiaBold", Georgia, serif;
 }
 
 /* line 15, ../sass/_globals.scss */
-p {
-  font-family: "GIRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h3, h4, h5, h6, p {
+  font-family: monospace;
 }
 
 /* line 19, ../sass/_globals.scss */
 a {
-  color: #663b3c;
+  color: black;
 }
 
 /* line 10, ../sass/pages/_splash.scss */
@@ -169,4 +169,127 @@ h1#splash-header a {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
+}
+
+/* line 1, ../sass/components/_squares.scss */
+.square {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+/* line 12, ../sass/components/_squares.scss */
+.square h1, .square h2, .square h3, .square h4, .square h5, .square h6 {
+  margin: 0;
+  padding: 0;
+}
+/* line 16, ../sass/components/_squares.scss */
+.square h2 {
+  padding-bottom: 5px;
+}
+/* line 19, ../sass/components/_squares.scss */
+.square p {
+  margin-top: 0;
+}
+/* line 23, ../sass/components/_squares.scss */
+.square .square-content {
+  visibility: hidden;
+}
+
+/* line 31, ../sass/components/_squares.scss */
+.splash-name h1.splash-header {
+  color: #ff5a5f;
+  margin: 0;
+  padding-bottom: 0;
+}
+/* line 37, ../sass/components/_squares.scss */
+.splash-name h1.splash-header a {
+  color: #ff5a5f;
+  text-decoration: none;
+}
+/* line 42, ../sass/components/_squares.scss */
+.splash-name h3.splash-subheader {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 50px;
+}
+
+/* line 52, ../sass/components/_squares.scss */
+.nw-resize {
+  cursor: nw-resize;
+}
+
+/* line 55, ../sass/components/_squares.scss */
+.se-resize {
+  cursor: se-resize;
+}
+
+/* line 62, ../sass/components/_squares.scss */
+#music, #video {
+  margin-top: -1px;
+}
+
+/* line 65, ../sass/components/_squares.scss */
+.border-on-top {
+  z-index: 15;
+}
+
+/* line 70, ../sass/components/_squares.scss */
+h3, h4, h5, h6 {
+  font-family: monospace;
+}
+
+/* line 74, ../sass/components/_squares.scss */
+p {
+  font-family: monospace;
+}
+
+/* line 9, ../sass/components/_sidebar.scss */
+.w-resize {
+  cursor: w-resize;
+}
+
+/* line 12, ../sass/components/_sidebar.scss */
+.e-resize {
+  cursor: e-resize;
+}
+
+/* line 16, ../sass/components/_sidebar.scss */
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 131px;
+  width: 40px;
+  height: 467px;
+  margin-right: -1px;
+  border: 1px solid black;
+}
+/* line 25, ../sass/components/_sidebar.scss */
+.sidebar .sidebar-header h2 {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-top: 35px;
+  margin-left: -15px;
+}
+/* line 31, ../sass/components/_sidebar.scss */
+.sidebar .sidebar-content {
+  position: relative;
+  top: 80px;
+  left: 0;
+  padding: 10px;
+  visibility: hidden;
+}
+
+/* line 40, ../sass/components/_sidebar.scss */
+.sidebar-on-top {
+  background-color: white;
+  z-index: 20;
 }

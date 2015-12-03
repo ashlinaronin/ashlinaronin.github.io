@@ -3,17 +3,14 @@
 @import "zen/background";
 
 // Definitions first
-@import "_variables.scss";
+@import "variables";
 
 // Then global styles
-@import "_globals.scss";
-// @import "_buttons.scss";
+@import "globals";
 
 // Then page specifics
 @import "pages/_splash.scss";
 
-// Grids -- Order is important because lexical scope in HTML/CSS
-// @import "_main-grid.scss";
-// @import "_icon-grid.scss";
-
-// @import "_slideshow.scss";
+// Then specific components
+@import "components/squares";
+@import "components/sidebar";

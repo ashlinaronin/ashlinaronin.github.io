@@ -1,0 +1,77 @@
+.square {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 1;
+
+  // Account for spacing between headers and squares
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    padding-bottom: 5px;
+  }
+  p {
+    margin-top: 0;
+  }
+
+  .square-content {
+    visibility: hidden;
+    // width: 400px;
+    // height: 400px;
+  }
+}
+
+.splash-name {
+  h1.splash-header {
+    color: $primary-color;
+    margin: 0;
+    padding-bottom: 0;
+
+    // Don't use link styling for links inside of the splash header
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+  h3.splash-subheader {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 50px;
+  }
+}
+
+
+
+// Cursor classes
+.nw-resize {
+  cursor: nw-resize;
+}
+.se-resize {
+  cursor: se-resize;
+}
+
+
+
+// Eliminate double border effect between music and video
+#music, #video {
+  margin-top: -1px;
+}
+.border-on-top {
+  z-index: 15;
+}
+
+
+h3, h4, h5, h6 {
+  font-family: monospace;
+}
+
+p {
+  // font-family: "GIRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: monospace;
+}

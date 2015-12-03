@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/styles.css" charset="utf-8">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/autopia" type="text/css"/>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+
 
     <title>ashlin aronin</title>
   </head>
   <body>
-    <div class="splash-name">
-      <h1 id="splash-header">
-        <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#115;&#104;&#108;&#105;&#110;&#097;&#114;&#111;&#110;&#105;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">ashlin aronin</a>
-      </h1>
-      <h3 id="splash-subheader">front-end developer, portland</h3>
-    </div>
 
     <div class="container">
+      <div class="splash-name">
+        <h1 class="splash-header">
+          <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#115;&#104;&#108;&#105;&#110;&#097;&#114;&#111;&#110;&#105;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">ashlin aronin</a>
+        </h1>
+        <h3 class="splash-subheader">front end developer, portland</h3>
+      </div>
 
-      <div class="projects">
-        <h2 id="projects-header">web</h2>
-        <div id="projects-content">
+      <div id="projects" class="se-resize square">
+        <h2 id="projects-header" class="square-header">web</h2>
+        <div id="projects-content" class="square-content">
           <h4><a href="http://ashlinaronin.github.io/hog-heave">hog heave</a></h4>
           <p>An implementation of the classic game of Pig Dice using jQuery and Animate.css.</p>
 
@@ -39,6 +39,11 @@
         </div>
       </div>
 
+      <div id="music" class="se-resize square">
+        <h2 id="music-header" class="square-header">music</h2>
+        <div id="music-content" class="square-content">
+          <h4><a href="https://soundcloud.com/trashlin">soundcloud</a></h4>
+          <p>Some of my original electronic music and mixes.</p>
 
       <div class="music-video">
         <div class="music">
@@ -51,23 +56,39 @@
             <p>Works by Messiaen and Dukas plus original compositions for computer-controlled organ and chamber ensemble.</p>
           </div>
         </div>
+      </div>
 
-        <div class="video">
-          <h2 id="video-header">video</h2>
-          <div id="video-content">
-            <h4><a href="https://www.youtube.com/watch?v=9vTUnLZgGgc">mi quang song</a></h4>
-            <p>A love affair with Vietnamese noodles in music video form.</p>
-            
-            <h4><a href="https://vimeo.com/40900211">babes</a></h4>
-            <p>Models' bodies distort as they walk a deconstructed Blender catwalk.</p>
-          </div>
+      <div id="video" class="se-resize square">
+        <h2 id="square-header" class="square-header">video</h2>
+        <div id="video-content" class="square-content">
+          <h4><a href="https://www.youtube.com/watch?v=9vTUnLZgGgc">mi quang song</a></h4>
+          <p>A love affair with Vietnamese noodles in music video form.</p>
+
+          <h4><a href="https://vimeo.com/40900211">babes</a></h4>
+          <p>Models' bodies distort as they walk a deconstructed Blender catwalk.</p>
         </div>
       </div>
+
+      <div id="about" class="sidebar w-resize">
+        <div class="sidebar-header">
+          <h2>about</h2>
+        </div>
+        <div class="sidebar-content">
+        <p>I'm a recent graduate of Epicodus in Portland, OR.
+          Before that I taught English/ate noodles in Vietnam for a few years.
+          I enjoy cooking, running, playing with my Google Cardboard and Arduino and making generative art.
+        </p>
+        <p>&nbsp;</p>
+        <p>Visit my <a href="https://github.com/ashlinaronin/">github</a> or <a href="https://www.linkedin.com/in/ashlinaronin">linkedin</a>.</p>
+        </div>
+      </div>
+
 
     </div>
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/splash.js"></script>
   </body>
 </html>

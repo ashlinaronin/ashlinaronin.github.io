@@ -1,0 +1,43 @@
+@mixin rotateText($degrees) {
+  -webkit-transform: rotate(#{$degrees}deg); // Safari
+  -moz-transform: rotate(#{$degrees}deg); // Firefox
+  -ms-transform: rotate(#{$degrees}deg); // IE
+  -o-transform: rotate(#{$degrees}deg); // Opera
+  transform: rotate(#{$degrees}deg); // future
+}
+
+.w-resize {
+  cursor: w-resize;
+}
+.e-resize {
+  cursor: e-resize;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 131px;
+  width: 40px;
+  height: 467px;
+  margin-right: -1px;
+  border: 1px solid black;
+
+  .sidebar-header h2 {
+    position: absolute;
+    @include rotateText(-90);
+    margin-top: 35px;
+    margin-left: -15px;
+  }
+  .sidebar-content {
+    position: relative;
+    top: 80px;
+    left: 0;
+    padding: 10px;
+    visibility: hidden;
+  }
+}
+
+.sidebar-on-top {
+  background-color: white;
+  z-index: 20;
+}

@@ -3,19 +3,19 @@ body {
 }
 
 .container {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2 {
   font-family: "AutopiaBold", Georgia, serif;
 }
 
-p {
-  font-family: "GIRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h3, h4, h5, h6, p {
+  font-family: monospace;
 }
 
 a {
-  color: $other-primary;
+  color: black;
 }

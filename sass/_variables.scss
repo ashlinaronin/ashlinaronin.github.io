@@ -3,7 +3,6 @@ $darker-primary: darken($primary-color, 45);
 $other-primary: desaturate(darken($primary-color, 36), 73);
 $complementary: darken(adjust_hue($primary-color, 197), 54);
 
-
 @mixin our-border() {
   border: 1px solid $darker-primary;
 }
