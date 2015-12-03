@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     // Get just name string from selector object, then play that phaser
     // var selectorString = selector.attributes[0].value;
-    var selectorString = selector.id;
+    var selectorString = selector.id || selector.attributes[0].value;
     phasers[selectorString].pause();
 
     // Reset border to black before hiding text
@@ -127,7 +127,9 @@ $(document).ready(function() {
     // Open to different width depending on viewport width
     var windowWidth = window.innerWidth;
     if (windowWidth < smallScreenCutoff) { // smaller screens
-      shrink(expanded);
+      if (expanded !== null) {
+        shrink(expanded);
+      }
       TweenLite.to(selector, speed, {width: windowWidth-21, ease: Power2.easeInOut, onComplete: function() {showSidebarText(speed)}});
     } else if ((windowWidth < medScreenCutoff) && (expanded)) { // med screens with other sq open
       shrink(expanded);
@@ -157,6 +159,7 @@ $(document).ready(function() {
 
   // Set up event binding for sidebar
   $('#about').click(function() {
+    console.log('sidebarex'+sidebarExpanded);
     if (!sidebarExpanded) {
       openSidebar($(this), 1.25);
     } else {

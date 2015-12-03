@@ -57,21 +57,10 @@
 }
 
 
-
 // Eliminate double border effect between music and video
 #music, #video {
   margin-top: -1px;
 }
 .border-on-top {
   z-index: 15;
-}
-
-
-h3, h4, h5, h6 {
-  font-family: monospace;
-}
-
-p {
-  // font-family: "GIRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-family: monospace;
 }
