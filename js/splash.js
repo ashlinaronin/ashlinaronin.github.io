@@ -127,6 +127,7 @@ $(document).ready(function() {
     // Open to different width depending on viewport width
     var windowWidth = window.innerWidth;
     if (windowWidth < smallScreenCutoff) { // smaller screens
+      shrink(expanded);
       TweenLite.to(selector, speed, {width: windowWidth-21, ease: Power2.easeInOut, onComplete: function() {showSidebarText(speed)}});
     } else if ((windowWidth < medScreenCutoff) && (expanded)) { // med screens with other sq open
       shrink(expanded);

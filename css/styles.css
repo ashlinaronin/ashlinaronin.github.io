@@ -11,17 +11,17 @@ body {
   margin-right: 20px;
 }
 
-/* line 11, ../sass/_globals.scss */
+/* line 14, ../sass/_globals.scss */
 h1, h2 {
   font-family: "AutopiaBold", Georgia, serif;
 }
 
-/* line 15, ../sass/_globals.scss */
+/* line 18, ../sass/_globals.scss */
 h3, h4, h5, h6, p {
   font-family: monospace;
 }
 
-/* line 20, ../sass/_globals.scss */
+/* line 23, ../sass/_globals.scss */
 a {
   color: black;
 }
@@ -122,8 +122,9 @@ p {
   height: 467px;
   margin-right: -1px;
   border: 1px solid black;
+  overflow: hidden;
 }
-/* line 25, ../sass/components/_sidebar.scss */
+/* line 26, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-header h2 {
   position: absolute;
   -webkit-transform: rotate(-90deg);
@@ -134,7 +135,7 @@ p {
   margin-top: 35px;
   margin-left: -15px;
 }
-/* line 31, ../sass/components/_sidebar.scss */
+/* line 32, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-content {
   position: relative;
   top: 80px;
@@ -143,7 +144,7 @@ p {
   visibility: hidden;
 }
 
-/* line 40, ../sass/components/_sidebar.scss */
+/* line 41, ../sass/components/_sidebar.scss */
 .sidebar-on-top {
   background-color: white;
   z-index: 20;
