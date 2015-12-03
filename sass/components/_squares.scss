@@ -22,8 +22,8 @@
 
   .square-content {
     visibility: hidden;
-    width: 400px;
-    height: 400px;
+    // width: 400px;
+    // height: 400px;
   }
 }
 
@@ -55,12 +55,7 @@
 .se-resize {
   cursor: se-resize;
 }
-.w-resize {
-  cursor: w-resize;
-}
-.e-resize {
-  cursor: e-resize;
-}
+
 
 
 // Eliminate double border effect between music and video
@@ -68,7 +63,7 @@
   margin-top: -1px;
 }
 .border-on-top {
-  z-index: 5;
+  z-index: 15;
 }
 
 

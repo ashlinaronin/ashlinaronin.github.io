@@ -48,8 +48,6 @@ a {
 /* line 23, ../sass/components/_squares.scss */
 .square .square-content {
   visibility: hidden;
-  width: 400px;
-  height: 400px;
 }
 
 /* line 31, ../sass/components/_squares.scss */
@@ -80,32 +78,22 @@ a {
   cursor: se-resize;
 }
 
-/* line 58, ../sass/components/_squares.scss */
-.w-resize {
-  cursor: w-resize;
-}
-
-/* line 61, ../sass/components/_squares.scss */
-.e-resize {
-  cursor: e-resize;
-}
-
-/* line 67, ../sass/components/_squares.scss */
+/* line 62, ../sass/components/_squares.scss */
 #music, #video {
   margin-top: -1px;
 }
 
-/* line 70, ../sass/components/_squares.scss */
+/* line 65, ../sass/components/_squares.scss */
 .border-on-top {
-  z-index: 5;
+  z-index: 15;
 }
 
-/* line 79, ../sass/components/_squares.scss */
+/* line 74, ../sass/components/_squares.scss */
 h3, h4, h5, h6 {
   font-family: monospace;
 }
 
-/* line 83, ../sass/components/_squares.scss */
+/* line 78, ../sass/components/_squares.scss */
 p {
   font-family: monospace;
 }
@@ -129,8 +117,6 @@ p {
   height: 467px;
   margin-right: -1px;
   border: 1px solid black;
-  background-color: white;
-  z-index: 10;
 }
 /* line 29, ../sass/components/_sidebar.scss */
 .sidebar .sidebar-header h2 {
@@ -150,4 +136,10 @@ p {
   left: 0;
   padding: 10px;
   visibility: hidden;
+}
+
+/* line 55, ../sass/components/_sidebar.scss */
+.sidebar-on-top {
+  background-color: white;
+  z-index: 20;
 }

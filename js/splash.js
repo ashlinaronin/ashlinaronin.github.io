@@ -3,6 +3,8 @@ $(document).ready(function() {
   var expanded = null;
   var phasers = [];
   var sidebarExpanded = false;
+  var smallScreenCutoff = 480;
+  var medScreenCutoff = 740;
 
   var expandSquare = function(selector, small, big, speed) {
     $(selector).click(function(event) {
@@ -35,7 +37,8 @@ $(document).ready(function() {
     }
 
     // Get just name string from selector object, then play that phaser
-    var selectorString = selector.attributes[0].value;
+    // var selectorString = selector.attributes[0].value;
+    var selectorString = selector.id;
     phasers[selectorString].pause();
 
     // Reset border to black before hiding text
@@ -44,6 +47,7 @@ $(document).ready(function() {
     );
 
     hideText();
+    // $(selector).css('z-index', '0');
 
     // Switch pointer styles
     $(selector).addClass('se-resize');
@@ -54,6 +58,7 @@ $(document).ready(function() {
   }
 
   var grow = function(selector) {
+    var windowWidth = window.innerWidth;
     // Grow square before showing text
     var showText = function() {
       var thisContent = $(selector).find(':nth-child(2)');
@@ -61,15 +66,31 @@ $(document).ready(function() {
     }
 
     var grower = function() {
-      TweenLite.to(selector, speed,
-        {width: big, height: big, ease:Power2.easeInOut,
-        onComplete: showText}
-      );
+      if (windowWidth < smallScreenCutoff) {
+        TweenLite.to(selector, speed,
+          {width: windowWidth-95, height: windowWidth-21,
+            ease: Power2.easeInOut,
+            onComplete: showText}
+        );
+      } else if ((windowWidth < medScreenCutoff) && (sidebarExpanded)) {
+        closeSidebar($('#about'), 1.25);
+        TweenLite.to(selector, speed,
+          {width: big, height: big, ease:Power2.easeInOut,
+          onComplete: showText}
+        );
+      } else {
+        TweenLite.to(selector, speed,
+          {width: big, height: big, ease:Power2.easeInOut,
+          onComplete: showText}
+        );
+      }
     }
 
     grower();
+    // $(selector).css('z-index', '15');
     // Get just name string from selector object, then play that phaser
-    var selectorString = selector.attributes[0].value;
+    // var selectorString = selector.attributes[0].value;
+    var selectorString = selector.id;
     console.log('selectorString:' + selectorString);
     phasers[selectorString].play();
 
@@ -108,14 +129,16 @@ $(document).ready(function() {
   }
 
   var openSidebar = function(selector, speed) {
+    selector.addClass('sidebar-on-top');
+    sidebarExpanded = true;
     var windowWidth = window.innerWidth;
-    if (windowWidth < 420) { // smaller screens
-      TweenLite.to(selector, speed, {width: windowWidth-21, ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
-    } else if ((windowWidth < 740) && (expanded)) { // med screens with other sq open
+    if (windowWidth < smallScreenCutoff) { // smaller screens
+      TweenLite.to(selector, speed, {width: windowWidth-21, ease: Power2.easeInOut, onComplete: function() {showSidebarText(speed)}});
+    } else if ((windowWidth < medScreenCutoff) && (expanded)) { // med screens with other sq open
       shrink(expanded);
-      TweenLite.to(selector, speed, {width: '300px', ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
+      TweenLite.to(selector, speed, {width: '300px', ease: Power2.easeInOut, onComplete: function() {showSidebarText(speed)}});
     } else { // med screens with no square open or large screens with or w/o squares open
-      TweenLite.to(selector, speed, {width: '300px', ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
+      TweenLite.to(selector, speed, {width: '300px', ease: Power2.easeInOut, onComplete: function() {showSidebarText(speed)}});
 
     }
 
@@ -127,23 +150,23 @@ $(document).ready(function() {
   var closeSidebar = function(selector, speed) {
     // Reset border to black before hiding text
     TweenLite.to(selector, speed/4,
-      {borderColor:'black', ease: Power3.easeInOut}
+      {borderColor:'black', ease: Power2.easeInOut}
     );
     TweenLite.to('.sidebar-content', speed/2, {autoAlpha:0});
-    TweenLite.to(selector, speed, {width: '40px', ease: Power3.easeInOut});
+    TweenLite.to(selector, speed, {width: '40px', ease: Power2.easeInOut});
+    selector.removeClass('border-on-top');
     selector.addClass('w-resize');
     selector.removeClass('e-resize');
     phasers['about'].pause();
+    sidebarExpanded = false;
   }
 
   // actually set up event binding for sidebar
   $('#about').click(function() {
     if (!sidebarExpanded) {
-      sidebarExpanded = true;
       openSidebar($(this), 1.25);
     } else {
       closeSidebar($(this), 1.25);
-      sidebarExpanded = false;
     }
   });
 
