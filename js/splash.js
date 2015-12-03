@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var expanded = null;
   var phasers = [];
+  var sidebarExpanded = false;
 
   var expandSquare = function(selector, small, big, speed) {
     $(selector).click(function(event) {
@@ -39,7 +40,7 @@ $(document).ready(function() {
 
     // Reset border to black before hiding text
     TweenLite.to(selector, speed/4,
-      {borderColor:'black', easing: Power3.easeInOut}
+      {borderColor:'black', ease: Power3.easeInOut}
     );
 
     hideText();
@@ -69,6 +70,7 @@ $(document).ready(function() {
     grower();
     // Get just name string from selector object, then play that phaser
     var selectorString = selector.attributes[0].value;
+    console.log('selectorString:' + selectorString);
     phasers[selectorString].play();
 
     // Switch pointer styles
@@ -94,6 +96,56 @@ $(document).ready(function() {
     return sqt;
   }
 
+  // var openSidebar = function(selector) {
+  //   var newWidth = (selector.width() == '400' ? '40' : '400') + 'px';
+  //   TweenLite.to(selector, 1.25, {width: newWidth, ease: Power3.easeInOut});
+  //   selector.toggleClass('w-resize');
+  //   selector.toggleClass('e-resize');
+  // }
+
+  var showSidebarText = function(speed) {
+    TweenLite.to('.sidebar-content', speed/2, {autoAlpha:1});
+  }
+
+  var openSidebar = function(selector, speed) {
+    var windowWidth = window.innerWidth;
+    if (windowWidth < 420) { // smaller screens
+      TweenLite.to(selector, speed, {width: windowWidth-21, ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
+    } else if ((windowWidth < 740) && (expanded)) { // med screens with other sq open
+      shrink(expanded);
+      TweenLite.to(selector, speed, {width: '300px', ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
+    } else { // med screens with no square open or large screens with or w/o squares open
+      TweenLite.to(selector, speed, {width: '300px', ease: Power3.easeInOut, onComplete: function() {showSidebarText(speed)}});
+
+    }
+
+    selector.addClass('e-resize');
+    selector.removeClass('w-resize');
+    phasers['about'].play();
+  }
+
+  var closeSidebar = function(selector, speed) {
+    // Reset border to black before hiding text
+    TweenLite.to(selector, speed/4,
+      {borderColor:'black', ease: Power3.easeInOut}
+    );
+    TweenLite.to('.sidebar-content', speed/2, {autoAlpha:0});
+    TweenLite.to(selector, speed, {width: '40px', ease: Power3.easeInOut});
+    selector.addClass('w-resize');
+    selector.removeClass('e-resize');
+    phasers['about'].pause();
+  }
+
+  // actually set up event binding for sidebar
+  $('#about').click(function() {
+    if (!sidebarExpanded) {
+      sidebarExpanded = true;
+      openSidebar($(this), 1.25);
+    } else {
+      closeSidebar($(this), 1.25);
+      sidebarExpanded = false;
+    }
+  });
 
   // Generate click event handlers for 3 divs with given sizes
   // var small = '15%';
@@ -114,5 +166,6 @@ $(document).ready(function() {
   phasers['projects'] = makeBorderPhaser('#projects', speed, colors, easing);
   phasers['music'] = makeBorderPhaser('#music', speed, colors, easing);
   phasers['video'] = makeBorderPhaser('#video', speed, colors, easing);
-
+  phasers['about'] = makeBorderPhaser('#about', speed, colors, easing);
+  console.dir(phasers);
 });

@@ -6,27 +6,48 @@
   transform: rotate(#{$degrees}deg); // future
 }
 
+.w-resize {
+  cursor: w-resize;
+}
+.e-resize {
+  cursor: e-resize;
+}
+
 .sidebar {
   position: absolute;
   right: 0;
-  top: 130px;
+  top: 131px;
   width: 40px;
-  height: 470px;
+  height: 467px;
   margin-right: -1px;
   border: 1px solid black;
-  .sidebar-header {
-    position: relative;
-    top: 25px;
-    left: 0;
-    h2 {
-      @include rotateText(-90);
-    }
+
+  // if it has to overlap other elements, be on top
+  background-color: white;
+  z-index: 10;
+
+  .sidebar-header h2 {
+    position: absolute;
+    @include rotateText(-90);
+    // top: 15px;
+    // top: 25px;
+    // right: 25px;
+    // margin-top: 5px;
+    // margin-left: 5px;
+    // margin: 0;
+    margin-top: 35px;
+    margin-left: -15px;
+    // padding: 0;
+    // text-align: right;
+    // h2 {
+
+    // }
   }
   .sidebar-content {
     position: relative;
     top: 80px;
     left: 0;
-    padding: 5px;
+    padding: 10px;
     visibility: hidden;
   }
 }
