@@ -21,7 +21,7 @@ css_dir         = "css"
 sass_dir        = "sass"
 extensions_dir  = "sass-extensions"
 images_dir      = "images"
-javascripts_dir = "js"
+javascripts_dir = "javascripts"
 
 # Set this to the root of your project. All resource locations above are
 # considered to be relative to this path.
