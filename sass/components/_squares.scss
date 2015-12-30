@@ -7,6 +7,7 @@
   padding-top: 5px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   // Account for spacing between headers and squares
   h1, h2, h3, h4, h5, h6 {
