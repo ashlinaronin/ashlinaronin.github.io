@@ -37,7 +37,6 @@ $(document).ready(function() {
     }
 
     // Get just name string from selector object, then play that phaser
-    // var selectorString = selector.attributes[0].value;
     var selectorString = selector.id || selector.attributes[0].value;
     phasers[selectorString].pause();
 
@@ -45,9 +44,7 @@ $(document).ready(function() {
     TweenLite.to(selector, speed/4,
       {borderColor:'black', ease: Power3.easeInOut}
     );
-
     hideText();
-    // $(selector).css('z-index', '0');
 
     // Switch pointer styles
     $(selector).addClass('se-resize');
@@ -58,7 +55,9 @@ $(document).ready(function() {
   }
 
   var grow = function(selector) {
+    // Save windowWidth to minimize DOM access and increase performance
     var windowWidth = window.innerWidth;
+
     // Grow square before showing text
     var showText = function() {
       var thisContent = $(selector).find(':nth-child(2)');
@@ -87,18 +86,15 @@ $(document).ready(function() {
     }
 
     grower();
-    // $(selector).css('z-index', '15');
-    // Get just name string from selector object, then play that phaser
-    // var selectorString = selector.attributes[0].value;
-    var selectorString = selector.id;
-    console.log('selectorString:' + selectorString);
-    phasers[selectorString].play();
+
+    // Play this border phaser
+    phasers[selector.id].play();
 
     // Switch pointer styles
     $(selector).addClass('nw-resize');
     $(selector).removeClass('se-resize');
 
-    // mess with z-index to show border on top
+    // Adjust z-index to show border on top
     $(selector).addClass('border-on-top');
   }
 
@@ -168,9 +164,6 @@ $(document).ready(function() {
   });
 
   // Generate click event handlers for 3 divs with given sizes
-  // var small = '15%';
-  // var big = '40%';
-  // var speed = 600;
   var small = '150px';
   var big = '400px';
   var speed = 1;
