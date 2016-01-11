@@ -155,7 +155,6 @@ $(document).ready(function() {
 
   // Set up event binding for sidebar
   $('#about').click(function() {
-    console.log('sidebarex'+sidebarExpanded);
     if (!sidebarExpanded) {
       openSidebar($(this), 1.25);
     } else {
