@@ -6,8 +6,8 @@ $(document).ready(function() {
   var smallScreenCutoff = 480;
   var medScreenCutoff = 740;
 
-  var expandSquare = function(selector, small, big, speed) {
-    $(selector).click(function(event) {
+  var expandSquare = function(selector) {
+    $(selector).click(function() {
       if (!expanded) {
         grow(this);
         expanded = this;
@@ -166,9 +166,10 @@ $(document).ready(function() {
   var small = '150px';
   var big = '400px';
   var speed = 1;
-  expandSquare('div#projects', small, big, speed);
-  expandSquare('div#music', small, big, speed);
-  expandSquare('div#video', small, big, speed);
+
+  $('.square').each(function (index, square) {
+    expandSquare(square);
+  });
 
   // Set up phasers for borders and save them to scoped array
   // so we can access them from within the square handlers
