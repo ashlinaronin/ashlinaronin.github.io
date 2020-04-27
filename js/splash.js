@@ -6,6 +6,12 @@ $(document).ready(function() {
   var smallScreenCutoff = 480;
   var medScreenCutoff = 740;
 
+  var small = '150px';
+  var big = '400px';
+  var colors = ['red', 'green', 'blue', 'yellow'];
+  var speed = 1;
+  var easing = Power3.easeInOut;
+
   var expandSquare = function(selector) {
     $(selector).click(function() {
       if (!expanded) {
@@ -162,23 +168,17 @@ $(document).ready(function() {
     }
   });
 
-  // Generate click event handlers for 3 divs with given sizes
-  var small = '150px';
-  var big = '400px';
-  var speed = 1;
 
   $('.square').each(function (index, square) {
+    // Generate click event handlers for 3 divs with given sizes
     expandSquare(square);
+
+    // Set up phasers for borders and save them to scoped array
+    // so we can access them from within the square handlers
+    phasers[square.id] = makeBorderPhaser('#'+square.id, speed, colors, easing);
   });
 
-  // Set up phasers for borders and save them to scoped array
-  // so we can access them from within the square handlers
-  var colors = ['red', 'green', 'blue', 'yellow'];
-  var speed = 1;
-  var easing = Power3.easeInOut;
-  phasers['projects'] = makeBorderPhaser('#projects', speed, colors, easing);
-  phasers['music'] = makeBorderPhaser('#music', speed, colors, easing);
-  phasers['video'] = makeBorderPhaser('#video', speed, colors, easing);
+  // make "about" phaser manually, since it is not one of the squares that will be set up above
   phasers['about'] = makeBorderPhaser('#about', speed, colors, easing);
 
 });
