@@ -42,9 +42,8 @@ $(document).ready(function() {
         {autoAlpha:0, onComplete: shrinker});
     }
 
-    // Get just name string from selector object, then play that phaser
-    var selectorString = selector.id || selector.attributes[0].value;
-    phasers[selectorString].pause();
+    // Get just name string from selector object, then pause that phaser
+    phasers[selector.id].pause();
 
     // Reset border to black before hiding text
     TweenLite.to(selector, speed/4,
