@@ -23,8 +23,11 @@
 
   .square-content {
     visibility: hidden;
-    // width: 400px;
-    // height: 400px;
+  }
+
+  // Eliminate double border effect
+  &:not(:first-child) {
+    margin-top: -1px;
   }
 }
 
@@ -57,11 +60,6 @@
   cursor: se-resize;
 }
 
-
-// Eliminate double border effect between music and video
-#music, #video {
-  margin-top: -1px;
-}
 .border-on-top {
   z-index: 15;
 }
