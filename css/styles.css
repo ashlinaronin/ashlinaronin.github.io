@@ -19,7 +19,7 @@ h1, h2 {
   font-family: "Autopia Bold", Georgia, serif;
 }
 
-h3, h4, h5, h6, p {
+h3, h4, h5, h6, p, ul, li {
   font-family: monospace;
 }
 
@@ -112,6 +112,10 @@ a {
   left: 0;
   padding: 10px;
   visibility: hidden;
+}
+.sidebar .sidebar-content ul {
+  list-style-type: "~ ";
+  padding: 10px;
 }
 
 .sidebar-on-top {

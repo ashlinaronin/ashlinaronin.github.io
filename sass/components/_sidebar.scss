@@ -27,6 +27,11 @@
     left: 0;
     padding: 10px;
     visibility: hidden;
+
+    ul {
+      list-style-type: '~ ';
+      padding: 10px;
+    }
   }
 }
 
